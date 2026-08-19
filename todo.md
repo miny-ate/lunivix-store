@@ -1,0 +1,39 @@
+# Project TODO
+
+- [x] Define Lunivix domain models for catalogue products, OEM/compatible status, brands, categories, suppliers, procurement requests, quotations, quote revisions, orders, payments, and deliveries.
+- [x] Implement a premium, mobile-first Lunivix public homepage with refined brand identity, value proposition, and three customer entry paths.
+- [x] Implement responsive equipment and spare-parts catalogue pages with Laundry, Kitchen, Refrigeration, and Dishwashing categories.
+- [x] Implement product cards and product detail pages with consistent OEM/Compatible labels, availability, lead time, technical specifications, datasheet status, and purchase/quote actions.
+- [x] Implement part-number search with exact, partial, brand, model, and description matching plus lost-search tracking.
+- [x] Implement Buy Now cart and checkout foundation without activating a payment provider until provider credentials and business decisions are supplied.
+- [x] Implement Request Quote, Find a Part, Procurement Request, Quick Order, and RFQ/Tender submission foundations with safe file-upload architecture.
+- [x] Implement customer account foundations for orders, quotations, procurement requests, invoices, saved products, and repeat orders.
+- [x] Add complete administrator entry fields for freight, clearing, local delivery, margin, customer name, validity, lead time, and delivery terms before creating revision PDFs.
+- [x] Require all private cost components and customer-facing commercial terms before an administrator can create a quotation draft.
+- [x] Accept private quote margin as a mandatory percentage input and convert it to the stored decimal rate before pricing or revision generation.
+- [x] Require freight, clearing, and local delivery as private KSh amount inputs before quotation draft creation.
+- [x] Ensure each change to quotation commercial terms creates a new immutable revision while preserving every earlier revision for audit.
+- [x] Support multiple administrator-entered line items in each quotation draft and each subsequent revision.
+- [x] Capture an optional product or part number with each quotation line item for procurement traceability.
+- [x] Allow administrators to add or remove line items only before a draft revision is saved; preserve every saved revision as immutable.
+- [x] Save validated quotation drafts without a second administrator confirmation step, while preserving immutable saved revision history.
+- [x] Implement an administrator edit workflow for existing quotation commercial terms and line items that creates a new immutable revision instead of overwriting previous revision data.
+- [x] Add regression coverage proving that a quotation commercial-term edit creates a new revision while earlier revision snapshots remain unchanged.
+- [x] Make quotation update, PDF generation, and revision snapshot persistence rollback-safe so commercial terms cannot change without a corresponding immutable revision.
+- [x] Add workflow-level tests for append-only revision numbering, unchanged earlier snapshots, and revision-generation failure handling.
+- [x] Implement customer-visible delivery tracking and product-aware WhatsApp enquiry links.
+- [x] Implement public analytics foundations and an admin-facing lost-search overview without exposing supplier cost or margin data.
+- [x] Add a database schema and API procedures with role-based access control for customer and admin operations.
+- [x] Add tests for key data isolation, pricing calculation, search tracking, and quotation revision behaviours.
+- [x] Add GitHub-ready documentation, environment guidance, deployment instructions, and hosting configuration.
+- [x] Verify dedicated catalogue/product/account pages, run automated tests, and prepare the final project checkpoint.
+- [x] Show stored quotation records and prior revision metadata in the private quotation-revision screen; payment reconciliation is complete.
+- [x] Prepare provider activation boundaries and document the merchant-controlled requirements for production payments, WhatsApp business, transactional email, and delivery-provider integrations.
+- [x] Add a non-charging PayHero checkout simulation and callback safety boundary without enabling live customer charges.
+- [x] Generate PayHero Basic authorization server-side from securely supplied rotated API username and password, then validate the configured channel with a read-only request.
+- [x] Fix the Vite development preview websocket connection failure reported on the managed preview URL by removing the unsupported dev websocket client from the managed middleware preview.
+- [x] Complete final packaging after the remaining quotation workflow and non-charging PayHero checkout/callback foundation are finished.
+- [x] Refresh README and activation guidance to reflect the completed immutable quotation revision workflow and PayHero username/password configuration.
+- [x] Save a final verified project checkpoint after the quotation workflow and documentation refresh.
+- [x] Prepare the final delivery summary with verification and provider-activation guidance.
+- [ ] Publish the completed Lunivix source to a new public GitHub repository and verify the remote URL.

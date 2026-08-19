@@ -1,0 +1,1 @@
+ALTER TABLE `quotationLineItems` ADD `partNumber` varchar(160);

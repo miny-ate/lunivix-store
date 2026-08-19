@@ -1,0 +1,1 @@
+ALTER TABLE `quotationRevisions` ADD CONSTRAINT `quotationRevisionUnique` UNIQUE(`quotationId`,`revisionNumber`);
